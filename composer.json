@@ -1,5 +1,5 @@
 {
-    "name": "tots/email-laravel",
+    "name": "tots/email-tsend-laravel",
     "description": "The library for Laravel PHP",
     "version": "0.0.1",
     "type": "library",
