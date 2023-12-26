@@ -19,4 +19,10 @@ class TotsSendService implements TotsEmailService
         $service = new TotsSend($this->config['key']);
         return $service->send($email, $template, $params);
     }
+
+    public function sendRaw($email, $subject, $html, $params = [], $plainText = '')
+    {
+        $service = new TotsSend($this->config['key']);
+        return $service->sendRaw($email, $subject, $html, $params, $plainText);
+    }
 }

@@ -5,6 +5,8 @@ namespace Tots\EmailTSend\Providers;
 use Illuminate\Support\ServiceProvider;
 use Tots\Email\Services\TotsEmailService;
 use Tots\EmailTSend\Services\TotsSendService;
+use Illuminate\Support\Facades\Mail;
+use Tots\EmailTSend\Transports\TotsSendTransport;
 
 class TotsSendProvider extends ServiceProvider
 {
@@ -26,6 +28,8 @@ class TotsSendProvider extends ServiceProvider
      */
     public function boot()
     {
-
+        Mail::extend('tots_send', function (array $config = []) {
+            return new TotsSendTransport(app(TotsEmailService::class));
+        });
     }
 }
