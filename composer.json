@@ -1,7 +1,7 @@
 {
     "name": "tots/email-tsend-laravel",
     "description": "The library for Laravel PHP",
-    "version": "0.0.2",
+    "version": "11.0.0",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -18,7 +18,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^8.0",
-        "laravel/framework": "^10.10",
+        "laravel/framework": "^11",
         "tots/email-laravel": "dev-main",
         "tots/tots-send-api": "dev-main"
     },
